@@ -1,0 +1,16 @@
+{
+  "name": "singular-widget-development-boilerplate",
+  "version": "1.0.0",
+  "description": "Singular Widget Boilerplate",
+  "author": "Singular.Live",
+  "scripts": {
+    "deploy": "node deploy.js"
+  },
+  "engines": {
+    "node": "0.12.2"
+  },
+  "dependencies": {
+    "superagent": "^1.8.3",
+    "zip-dir": "^1.0.2"
+  }
+}
