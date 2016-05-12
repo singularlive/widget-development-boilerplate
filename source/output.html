@@ -1,58 +1,28 @@
 <!DOCTYPE html>
 <html>
-
-	<body style="
-    margin-left: 0;
-    margin-bottom: 0;
-    margin-right: 0;
-    margin-top: 0;
-		background:none;" >
+	<body style="margin: 0; background:none" >
 	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>	
-	<script src="https://code.createjs.com/tweenjs-0.6.1.min.js"></script>
-
 	<!-- Singular Widget Library -->
-  <script src="http://localhost:3000/libs/1.0.0/singularwidget.js"></script>
-
-  <div id='myDiv' style="color: white; position: absolute; left:0px; top:0px; height: 700px; width: 700px;" />This is my Div</div>
-  <div id='myDiv2' style="color: white; position: absolute;left: 800px; height: 700px;" />This is my Div</div>
+	<script src="https://app.singular.live/libs/1.0.0/singularwidget.js"></script>
 
 	<script>
-
-		var handle;
-		var handle2;
-
-		$(function() {
-			SingularWidget.init({
-          onInit: onSingularInit,
-          onValue: onSingularValue,
-          onButtonClicked: onSingularButtonClicked
-        });
-		})
+		SingularWidget.init({
+		  onInit: onSingularInit,
+		  onValue: onSingularValue,
+		  onButtonClicked: onSingularButtonClicked
+		});
 	
 		function onSingularInit() {
-			return;
-			var handle;
-			SingularWidget.instantiate('prototype', document.getElementById('myDiv'), function cb(h) { handle = h });
+			console.log("onSingularInit"); 
 		}
 		
 		function onSingularValue(json) {
-			console.log(json);
-			if (json.composition) {
-				SingularWidget.instantiate(json.composition, document.getElementById('myDiv'), function cb(h) { 
-					handle = h 
-				});
-			}
-			
-			//SingularWidget.instantiate(json.composition, document.getElementById('myDiv2'), function cb(h) { handle2 = h });
+			console.log("onSingularValue: \n" + json);
 		}
 
 		function onSingularButtonClicked(action) {
-      var random = Math.floor(Math.random() * 90 + 10);
-			console.log(random);
-
-			handle.setControlNode({headerText:'A ' + random, footerText:'B ' + random});
-    }
+			console.log("onSingularButtonClicked: " + action); 
+		}
 
   </script>
 </body>
