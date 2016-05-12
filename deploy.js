@@ -10,7 +10,7 @@ if (!config.deploykey) {
 var fs = require('fs');
 var zipdir = require('zip-dir');
 var xhr = require('superagent');
-var deployUrl = 'http://localhost:3000/widgets/deploywithkey';
+var deployUrl = 'https://staging-enigmatic-ocean-3936.herokuapp.com/widgets/deploywithkey';
 
 console.log('---------------------');
 console.log('Validate files in "source"');
