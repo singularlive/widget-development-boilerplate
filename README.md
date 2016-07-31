@@ -1,1 +1,0 @@
-# widget-development-boilerplate
