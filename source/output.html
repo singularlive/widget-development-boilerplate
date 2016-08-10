@@ -37,6 +37,15 @@
 		
 		function onSingularValue(json) {
 			console.log("onSingularValue", json);
+
+			/**
+			 * EXAMPLE: Send messages to the editor console
+			 * Message types: INFO, WARNING, ERROR
+			 */
+			SingularWidget.log.info({
+				title: 'My Widget',
+				description: 'Hello Singular!'
+			});
 		}
 
 		function onSingularButtonClicked(action) {
