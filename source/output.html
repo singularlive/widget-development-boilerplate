@@ -23,7 +23,7 @@
 	
 
 	<!-- Singular Widget Library -->
-	<script src="https://app.singular.live/libs/singularwidget/1.0.1/singularwidget.js"></script>
+	<script src="https://app.singular.live/libs/singularwidget/1.0.2/singularwidget.js"></script>
 	<script>
 		SingularWidget.init({
 		  onInit: onSingularInit,
@@ -37,19 +37,19 @@
 		
 		function onSingularValue(json) {
 			console.log("onSingularValue", json);
+		}
+
+		function onSingularButtonClicked(action) {
+			console.log("onSingularButtonClicked", action); 
 
 			/**
 			 * EXAMPLE: Send messages to the editor console
-			 * Message types: INFO, WARNING, ERROR
+			 * Message types: info, warning and error
 			 */
 			SingularWidget.log.info({
 				title: 'My Widget',
 				description: 'Hello Singular!'
 			});
-		}
-
-		function onSingularButtonClicked(action) {
-			console.log("onSingularButtonClicked", action); 
 		}
 
   </script>
